@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+body{
+    background-color: hsl(233, 47%, 7%);
+}
+
+/*The container contains both the text-container and the image container*/
+.container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    margin-top: 100px;
+    margin-left: 110px;
+    margin-right: 110px;
+    position: relative;
+}
+
+/*This is the last line in the preiview card*/
+section{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    line-height: 2rem;
+}
+
+section span{
+    color: hsl(277, 64%, 61%);
+    text-decoration: underline;
+}
+
+/*This container contains all the text in the preview card*/
+#text-container{
+    font-family: 'Inter', sans-serif;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(244, 38%, 16%);
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border: 1px solid none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#text-container #insight{
+    color: hsl(277, 64%, 61%);
+}
+
+#text-container h1{
+    font-size: 38px;
+}
+
+#text-container p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    width: 90%;
+    text-align: left;
+}
+
+#box{
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+}
+
+#box .box-x{
+    padding-right: 55px;
+    line-height: 1.6em;
+}
+
+#box .box-x h2{
+    margin-bottom: -10px;
+}
+
+/*This is the image container part*/
+#img-container img{
+    height: 100%;
+    width: fit-content;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#img-container{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    position: relative;
+}
+
+/*This part adds color to the image*/
+#img-container::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, hsl(277, 76%, 19%), hsl(277, 84%, 43%));
+    opacity: 0.5;
+}
+
+
+
+/*For mobile screen*/
+@media(max-width:375px){
+    .container{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        margin-top: 120px;
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+    }
+
+    section{
+        padding: 0 50px;
+    }
+    
+    #text-container{
+        order: 2;
+        margin: auto;
+        padding-top: 50px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: -5px;
+        border-radius: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        text-align: center;
+        place-items: center;
+        width: 78%;
+    }
+
+    #text-container h1{
+        font-size: 30px;
+    }
+
+    #text-container p{
+        font-size: 15px;
+        width: 90%;
+        text-align: center;
+        padding-left: 15px;
+    }
+
+    #box{
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    #box .box-x{
+        padding:0;
+    }
+    
+    #box .box-x h2{
+        margin-bottom: -10px;
+    }
+
+    #img-container img{
+        height: 100%;
+        width: 92%;
+        margin-left: 15px;
+        border-radius: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    
+    #img-container::before{
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        opacity: 0.5;
+        width: 92%;
+        height: 99%;
+        margin-left: 15px;
+        padding-bottom: 0;
+    }
+}
